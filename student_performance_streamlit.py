@@ -1,12 +1,13 @@
 import streamlit as st
 import numpy as np
 import pickle
+import joblib
 
 st.title("Welcome!!!")
 st.subheader("Student's Performance Checker")
 
 file = open('performance.pkl', 'rb')
-model = pickle.load(file)
+model = joblib.load(file)
 
 hr_std = st.number_input("Studied hour")
 pr_scr = st.number_input("Previous score")
